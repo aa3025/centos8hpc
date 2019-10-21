@@ -33,7 +33,7 @@ do
 	out_bios="/tftpboot/pxelinux.cfg/01-${mac//:/-}"
 	echo "$mac to $out"
 	ssh -o "StrictHostKeyChecking no" -i /root/.ssh/id_rsa ${masterIP} "cp -f $in  $out_bios;exit"
-	scp -o "StrictHostKeyChecking no" -i /root/.ssh/id_rsa /boot/grub2/grub.cfg root@${masterIP}:${out_efi}
+	scp -o "StrictHostKeyChecking no" -i /root/.ssh/id_rsa /boot/efi/EFI/centos/grub.cfg root@${masterIP}:${out_efi}
 	ssh -o "StrictHostKeyChecking no" -i /root/.ssh/id_rsa ${masterIP} "chmod o+r /tftpboot/pxelinux.cfg/*01-*"
 done 
 
@@ -64,7 +64,6 @@ echo "StrictHostKeyChecking	no" >> /etc/ssh/ssh_config
 #N=$(( oldIP * 1 ))
 
 IP="172.16.1.$N" # this will be my new static IP issued by dhcpd on reboot
-
 
 HOSTNAME="node$N"
 echo $HOSTNAME > /etc/hostname
