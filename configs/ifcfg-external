@@ -1,0 +1,5 @@
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+BOOTPROTO=dhcp
+ZONE=external
+
