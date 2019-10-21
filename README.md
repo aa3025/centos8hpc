@@ -8,7 +8,7 @@ Do not add any users during initial installation of the head node (only root). Y
 
 get the updated version of this repository
 
-2.1 From https://github.com/aa3025/centos7hpc/
+2.1 From https://github.com/aa3025/centos8hpc/
 
 2.2 Uncompress the archive or clone our project's git tree "git clone https://github.com/aa3025/centos8hpc.git"
 
@@ -22,7 +22,7 @@ Your installed master node must have the external network adapter configured, up
 
 The 2nd network adapter must be connected to the internal network of HPC (i.e. via switch or hub), where all the "compute" nodes will be booting up from. All compute nodes must be connected to the same hub with their (not necessarily) 1st network adapter and configured to boot from LAN (PXE boot).
 
-Download CentOS7 install DVD and run "./install.sh CentOS8xxxx.iso" from this folder. 
+Download CentOS8 install DVD and run "./install.sh CentOS8xxxx.iso" from this folder. 
 
 You will be prompted in a minute to enter internal and external LAN interface names. This is the only input required form user.
 
