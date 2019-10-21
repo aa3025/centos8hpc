@@ -27,6 +27,7 @@ chmod -R +x ./scripts/*
 #cat ./configs/epel.repo > /etc/yum.repos.d/epel.repo
 
 yum install epel-release -y
+
 #yum install network-scripts -y #depricated
 
 yum install wget readline ncurses-compat-libs perl -y
